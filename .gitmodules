@@ -1,0 +1,4 @@
+[submodule "apps/frobots_scenic"]
+	path = apps/frobots_scenic
+	url = ../../../frobots/client/frobots_scenic.git
+	branch = umbrella
