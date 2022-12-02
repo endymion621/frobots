@@ -25,11 +25,10 @@ erl_crash.dump
 # IDE
 .idea/
 *.iml
-.tool-versions
 
 #file system
 .DS_Store
 
 # local env vars
 .env
-SSH_KEY
+
