@@ -33,6 +33,7 @@ and create a `.lua` file. The name of the file will be your FROBOT name
     ```
     ```bash
     asdf plugin add elixir
+    ```
     ```bash
     asdf install erlang 24.3.4
     ```
@@ -50,12 +51,13 @@ If necessary, add these versions to the `.tool-versions` file that should be cre
 
 Ensure the right version is active
 
-    ```shell
+    ```bash
     elixir --version
     ```
 
 You should see something like this
-    ```
+
+    ```bash
     Erlang/OTP 24 [erts-12.3.2.2] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit]
 
     Elixir 1.13.4 (compiled with Erlang/OTP 23)
