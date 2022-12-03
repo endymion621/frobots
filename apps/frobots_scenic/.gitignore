@@ -19,16 +19,17 @@ erl_crash.dump
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
 
-# Temporary files, for example, from tests.
-/tmp
+# Ignore package tarball (built via "mix hex.build").
+foo-*.tar
 
-# IDE
-.idea/
-*.iml
-
-#file system
 .DS_Store
 
-# local env vars
-.env
 
+# Ignore scripts marked as secret - usually passwords and such in config files
+*.secret.exs
+*.secrets.exs
+
+/.idea/
+_build
+deps
+*.iml
