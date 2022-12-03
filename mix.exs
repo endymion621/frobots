@@ -64,6 +64,12 @@ defmodule Frobots.Umbrella.MixProject do
         include_executables_for: [:unix, :windows],
         steps: [:assemble, :tar]
       ],
+      frobots: [
+        version: @version,
+        applications: [frobots_scenic: :permanent, frobots: :permanent],
+        include_executables_for: [:unix, :windows],
+        steps: [:assemble, :tar]
+      ],
       local: [
         version: @version,
         applications: [frobots_scenic: :permanent, frobots: :permanent],
