@@ -88,7 +88,7 @@ Note that the version is 1.13.4 and built on Erlang/OTP 24, that is important.
 6. Run the binary (the output of the last step will tell you how)
 
     ```bash
-   frobots<rel version>/bin/frobots start
+   _build/prod/rel/frobots/bin/frobots start
     ```
 
 ## 4. Running Frobots
@@ -99,12 +99,13 @@ and create a `.lua` file. The name of the file will be your FROBOT name
    $HOME/bots/[myfrobot].lua
    ```
 2. You can use any editor or IDE to create and edit the `.lua` file, and you may find it easiest to keep the file open. Save it.
-3. On the client, upload your FROBOT to the beta server with the **Upload** button. The client looks for all `*.lua` files in your `$HOME/bots` dir.
-4. If you previously updoaded FROBOTS but have deleted the local copies of their brain files, you can press the **Download** button to get saved Frobots. These FROBOTs will overwrite any in your `/bots` directory.
-5. Once uploaded, you should be able to see you FROBOT in the dropdown list, to choose to battle.
-6. Click `FIGHT` to start the match.
-7. After the match, the results will be recorded. You can check the results on the beta console's Leaderboard page.
-8. You should upload your FROBOTs code often, as it is only the copy that is on the server which is used in matches, not your local editable copy.
-9. Instructions on how to program your FROBOT can be found on the beta console page, but you can experiment!
-10. You can only play your FROBOT against proto-bots for the beta. After the game is released you will be able to pit your FROBOT against other users FROBOTs in FUBARs.
-11. You can create as many FROBOTS as you like. But only a maximum of 3 will be preserved post-beta. The rest will go into the recycle parts bin!
+3. LOGIN to the frobots server login screen with your FROBOTS BETA credentials.
+4. On the client, upload your FROBOT to the beta server with the **Upload** button. The client looks for all `*.lua` files in your `$HOME/bots` dir.
+5. If you previously updoaded FROBOTS but have deleted the local copies of their brain files, you can press the **Download** button to get saved Frobots. These FROBOTs will overwrite any in your `/bots` directory.
+6. Once uploaded, you should be able to see you FROBOT in the dropdown list, to choose to battle.
+7. Click `FIGHT` to start the match.
+8. After the match, the results will be recorded. You can check the results on the beta console's Leaderboard page.
+9. You should upload your FROBOTs code often, as it is only the copy that is on the server which is used in matches, not your local editable copy.
+10. Instructions on how to program your FROBOT can be found on the beta console page, but you can experiment!
+11. You can only play your FROBOT against proto-bots for the beta. After the game is released you will be able to pit your FROBOT against other users FROBOTs in FUBARs.
+12. You can create as many FROBOTS as you like. But only a maximum of 3 will be preserved post-beta. The rest will go into the recycle parts bin!
