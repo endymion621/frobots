@@ -12,9 +12,9 @@ return function(state, ...)
     state = state or {}
     assert(
             type(state) == 'table',
-            'Invalid state. Must receive a table'
+            'Invalid state Must receive a table'
     )
-    state.type = "rabbit"
+    state._type = "rabbit"
     math.randomseed( os.time() )
     math.random(); math.random(); math.random()
 
@@ -47,8 +47,8 @@ return function(state, ...)
     local wanderspeed = 20
     local wandertimer = 5
     --- initial conditions
-    if state.status == nil then
-        state.status = "wandering"
+    if state._status == nil then
+        state._status = "wandering"
         state.damage = damage()
         state.wander_lust = wandertimer
         state.dest = {math.random(1000), math.random(1000)} --- go somewhere in the grid
@@ -60,24 +60,24 @@ return function(state, ...)
         state.dest = {math.random(1000), math.random(1000)} --- go somewhere in the grid
         state.course = plot_course(state.dest[1], state.dest[2])
         drive(state.course, 100)
-        state.status = "running"
+        state._status = "running"
         return state
-    elseif state.status == "wandering" or state.status == "running" then
+    elseif state._status == "wandering" or state._status == "running" then
         if distance(loc_x(), loc_y(), state.dest[1], state.dest[2]) < 50 then
             -- stop
             drive(0, 0)
-            state.status = "eating"
+            state._status = "eating"
         end
         return state
-    elseif state.status == "eating" and state.wander_lust > 0 then
+    elseif state._status == "eating" and state.wander_lust > 0 then
         state.wander_lust = state.wander_lust -1
         return state
-    elseif (state.status == "wandering" or state.status == "eating") and state.wander_lust < 0 then
-        if state.status == "wandering" then
-            state.status = "eating"
+    elseif (state._status == "wandering" or state._status == "eating") and state.wander_lust < 0 then
+        if state._status == "wandering" then
+            state._status = "eating"
             drive(0,0)
-        elseif state.status == "eating" then
-            state.status = "wandering"
+        elseif state._status == "eating" then
+            state._status = "wandering"
             state.dest = {math.random(1000), math.random(1000)} --- go somewhere in the grid
             state.course = plot_course(state.dest[1], state.dest[2])
             drive(state.course, wanderspeed)

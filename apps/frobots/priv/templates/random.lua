@@ -14,7 +14,7 @@ return function(state, ...)
     )
     math.randomseed( os.time() )
     math.random(); math.random(); math.random()
-    state.type = "random"
+    state._type = "random"
 
     local function distance(x1,y1,x2,y2)
         local x = x1 -x2

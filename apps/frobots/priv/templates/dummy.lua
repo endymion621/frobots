@@ -8,7 +8,7 @@
 
 return function(state, ...)
     state = state or {}
-    state.type = "dummy"
+    state._type = "dummy"
     if state.damage == nil then
         state.panic_counter = -1
         state.damage = damage()
@@ -16,12 +16,12 @@ return function(state, ...)
         state.damage = damage() --- don't forget to reset the damage stat!
         state.course = math.random(359)
         drive(state.course, 50)
-        state.status = "panic!"
+        state._status = "panic!"
         state.panic_counter = 10
     elseif state.panic_counter < 0 then
         state.panic_counter = -1
         drive(0,0)
-        state.status = "calm"
+        state._status = "calm"
     else
         state.course = math.random(359)
         drive(state.course, 50)
