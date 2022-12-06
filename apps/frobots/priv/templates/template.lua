@@ -15,6 +15,5 @@
 --- state._type (this is the type of your frobot... which prototype class it was started from)
 ---
 return function(state, ...)
-
     return state
 end
