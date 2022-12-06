@@ -86,7 +86,7 @@ defmodule Frobots do
   def load_player_frobots() do
     frobots =
       ApiClient.get_user_frobots()
-      |> Enum.filter(fn f -> f["Class"] == "U" end)
+      |> Enum.filter(fn f -> f["class"] == "U" end)
 
     Enum.each(frobots, fn f ->
       ConCache.put(:frobots, f["name"], f["id"])
